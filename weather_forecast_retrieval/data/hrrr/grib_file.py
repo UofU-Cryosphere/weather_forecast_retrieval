@@ -107,6 +107,12 @@ class GribFile(BaseFile):
 
         # open just one dataset at a time
         for key, params in var_map.items():
+
+            if key == 'precip_int':
+                file = file.replace(self.SUFFIX, 'apcp06.' + self.SUFFIX)
+            else:
+                file = file.replace('apcp06.', '')
+
             data = xr.open_dataset(
                 file,
                 engine='cfgrib',
