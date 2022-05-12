@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open('README.md') as readme_file:
+with open('README_wfr.md') as readme_file:
     readme = readme_file.read()
 
 with open('requirements.txt') as req_file:
